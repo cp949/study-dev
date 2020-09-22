@@ -82,7 +82,7 @@ $  cat /etc/docker/daemon.json
 
 ### docker-compose 설치
 
-visist and check latest version
+Visit and check latest version.
 
 > current version: 1.25.4
 > https://github.com/docker/compose/releases
