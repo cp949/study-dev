@@ -6,8 +6,31 @@
 #!/usr/bin/env bash
 
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
-cd $SCRIPT_DIR
+cd "$SCRIPT_DIR"
 
+```
+
+### if 문에 grep 명령 체크
+
+-   grep을 이용해 도커 네트워크에 특정이름의 네트워크가 존재하는지 체크한다.
+
+```bash
+if ! docker network ls | grep -q redis-net; then
+    echo 'not exist'
+else
+    echo 'exist'
+fi
+```
+
+-   위의 방식은 좋지 않다. 만약 my-redis-net 이라는 네트워크가 존재한다면 오동작하기 때문이다. 다음과 같이 하는 것이 좋다
+
+##### 개선된 버전
+
+```bash
+if ! docker network inspect redis-net >/dev/null 2>&1 ; then
+    echo "docker network create redis-net"
+    docker network create redis-net
+fi
 ```
 
 ### 값이 없으면 값을 지정
@@ -26,7 +49,7 @@ cd $SCRIPT_DIR
 
 ### 프로세스가 이미 실행중인지 체크
 
-ps 명령에 --pid 옵션을 활용하는 군
+-   ps 명령에 --pid 옵션을 활용하는 군, 나는 grep을 사용했었는데 ㅠㅠ
 
 ```bash
 read ppid < $JBOSS_PIDFILE
