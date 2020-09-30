@@ -6,10 +6,11 @@ My Development study
 
 - DJANGO
 - WebSocket
-- Mongodb
+- MongoDB
 - Typescript
 - Electron
 - SpringBoot cache with Redis
+- Express
 
 ## vim setup
 
