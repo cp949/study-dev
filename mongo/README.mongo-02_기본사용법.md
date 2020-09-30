@@ -14,13 +14,13 @@
 switched to db sample
 ```
 
-#### 현재 사용중인 DB
+##### 현재 사용중인 DB
 
 ```sh
 db
 ```
 
-#### DB 목록
+##### DB 목록
 
 - DB를 실제로 생성하는 것은 sample 번째 document가 만들어지는 시점이다. 그래서 위에서 만든 `sample` DB는 아직 존재하지 않는다.
 
