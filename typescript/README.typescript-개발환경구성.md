@@ -1,10 +1,14 @@
 # 타입스크립트 개발환경 구성
 
+## TODO
+
+- tslint가 deprecated되었다. eslint를 사용해야 한다. 문서 수정 예정
+
 ## Settings for vscode
 
 ```bash
-$  npm init -y
-$  yarn add -D @types/node typescript ts-node
+$ npm init -y
+$ yarn add -D @types/node typescript ts-node
 ```
 
 - tsconfig.json은 npx 명령으로 쉽게 다운로드 받을 수 있다.
@@ -42,7 +46,7 @@ $  yarn start
 
 ### nodemon 설치
 
-```
+```bash
 $  yarn add -D nodemon
 ```
 
@@ -65,9 +69,10 @@ $  yarn add -D nodemon
 $  nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/app.ts"`
 ```
 
-- 최종적으로 다음과 같이 작성했다.
+- (예전 버전) 최종적으로 다음과 같이 작성했다.
   - nodemon이나 ts-node는 개발중에만 사용해야 한다.
   - 운영환경에서는 `yarn start`로 실행해야 한다.
+  - 예전에는 이렇게 개발했지만, 지금은 `ts-node-dev`를 사용한다.
 
 ```json
 "scripts": {
@@ -89,6 +94,7 @@ $  yarn add -D tslint
 ```
 
 ### ts-node-dev
+
 - ts-node-dev가 있길래 메모해둔다.
 
 - [ts-node-dev github ](https://github.com/whitecolor/ts-node-dev)
