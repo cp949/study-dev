@@ -97,7 +97,8 @@ $  yarn add -D tslint
 
 - ts-node-dev가 있길래 메모해둔다.
 
-- [ts-node-dev github ](https://github.com/whitecolor/ts-node-dev)
+- [ts-node-dev github](https://github.com/whitecolor/ts-node-dev)
+
 >It restarts target node process when any of required files changes (as standard node-dev) but shares Typescript compilation process between restarts. This significantly increases speed of restarting comparing to node-dev -r ts-node/register ..., nodemon -x ts-node ... variations because there is no need to instantiate ts-node compilation each time.
 
 ### 절대경로 임포트 하기 `ts-config-paths`

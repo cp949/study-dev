@@ -1,6 +1,7 @@
 # Mongoose
 
 - NodeJS에서 MongoDB에 연결하기 위해 mongoose 라이브러리를 사용한다.
+- 타입스크립트를 사용한다면 `@types/mongoose`도 설치한다.
 
 ```bash
 yarn add mongoose
@@ -22,7 +23,7 @@ yarn add -D @types/mongoose
 // model/user.ts
 import { hash, compare } from 'bcryptjs'
 import { Schema, model, Document } from 'mongoose'
-import { BCRYPT_WORK_FACTOR } from '@/config'
+import { BCRYPT_WORK_FACTOR } from '../config'
 
 interface UserDocument extends Document {
     email: string
@@ -85,7 +86,7 @@ export const User = model<UserDocument>('User', userSchema)
   });
 ```
 
-- 후에 ket를 추가하려면, [Schema#add](https://mongoosejs.com/docs/api.html#schema_Schema-add)를 사용할 수 있다.
+- 후에 key를 추가하려면, [Schema#add](https://mongoosejs.com/docs/api.html#schema_Schema-add)를 사용할 수 있다.
 - 코드에서 정의한 각 키는 SchemaType에 캐스팅된다. 예를 들어 title은 String, date는 Date SchamaType으로 캐스팅 된다.
 - 프로퍼티가 타입만을 요구한다면 축약 표기법으로 명시할 수 있다.
 - 위의 `meta` 프로퍼티처럼 키는 중첩된 Object로 할당할 수 있다. 키의 값에 type 프로퍼티가 없는 POJO이어야 한다.
