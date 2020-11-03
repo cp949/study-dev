@@ -1,12 +1,12 @@
 # install docker-ce
 
-# 기존 설치 제거
+## 기존 설치 제거
 
 ```bash
 sudo apt-get remove docker docker-engine docker.io
 ```
 
-# 기본 유틸리티 설치
+## 기본 유틸리티 설치
 
 ```bash
 sudo apt-get update

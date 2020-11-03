@@ -2,7 +2,7 @@
 
 ### 설정 파일의 내용
 
-설정 파일의 내용 중 메일 관련 부분은 필요없을것 같아서 제외했다.
+설정 파일의 내용 중 메일 관련 부분은 필요없을 것 같아서 제외했다.
 
 - rotate [숫자] : log파일이 n개 이상 되면 삭제 \
   rotate 4, weekly 인 경우 4주간 보관한다. \
@@ -61,7 +61,7 @@ endscript
 $  cat /etc/logrotate.d/rsyslog
 ```
 
-```
+```text
 /var/log/syslog
 {
 	rotate 7
